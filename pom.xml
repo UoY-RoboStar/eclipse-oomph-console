@@ -176,7 +176,7 @@ Based on https://github.com/eclipseguru/eclipse-oomph-console (@guw and @a-lange
                 <configuration>
                     <target>
                         <artifact>
-                            <groupId>com.github.a-langer</groupId>
+                            <groupId>uk.ac.york.cs.robostar</groupId>
                             <artifactId>org.eclipse.oomph.console.tp</artifactId>
                             <version>1.0.5-SNAPSHOT</version>
                         </artifact>
