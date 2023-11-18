@@ -46,12 +46,10 @@ Based on https://github.com/eclipseguru/eclipse-oomph-console (@guw and @a-lange
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>-->
         <repository>
-            <repository>
-             <id>github</id>
-             <name>GitHub UoY-RoboStar Apache Maven Packages</name>
-             <url>https://maven.pkg.github.com/UoY-RoboStar/eclipse-oomph-console</url>
-           </repository>
-        </repository>
+         <id>github</id>
+         <name>GitHub UoY-RoboStar Apache Maven Packages</name>
+         <url>https://maven.pkg.github.com/UoY-RoboStar/eclipse-oomph-console</url>
+       </repository>
     </distributionManagement>
 
     <pluginRepositories>
