@@ -1,8 +1,12 @@
+<!--
+Based on https://github.com/eclipseguru/eclipse-oomph-console (@guw and @a-langer).
+-->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.github.a-langer</groupId>
+    <groupId>uk.ac.york.cs.robostar</groupId>
     <artifactId>org.eclipse.oomph.console.root</artifactId>
     <version>1.0.5-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -20,27 +24,33 @@
 
     <developers>
         <developer>
-            <id>a-langer</id>
-            <name>Alexey Langer</name>
-            <email>langeress@gmail.com</email>
-            <url>https://www.linkedin.com/in/a-langer</url>
+            <id>pefribeiro</id>
+            <name>Pedro Ribeiro</name>
+            <email>pedro.ribeiro@york.ac.uk</email>
         </developer>
     </developers>
 
-    <scm>
+    <!--<scm>
         <connection>scm:git@github.com:a-langer/eclipse-oomph-console.git</connection>
         <developerConnection>git@github.com:a-langer/eclipse-oomph-console.git</developerConnection>
         <url>https://github.com/a-langer/eclipse-oomph-console</url>
-    </scm>
+    </scm>-->
 
     <distributionManagement>
-        <snapshotRepository>
+        <!--<snapshotRepository>
             <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>-->
+        <repository>
+            <repository>
+             <id>github</id>
+             <name>GitHub UoY-RoboStar Apache Maven Packages</name>
+             <url>https://maven.pkg.github.com/UoY-RoboStar/eclipse-oomph-console</url>
+           </repository>
         </repository>
     </distributionManagement>
 
