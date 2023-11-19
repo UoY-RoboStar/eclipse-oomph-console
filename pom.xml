@@ -48,7 +48,7 @@ Based on https://github.com/eclipseguru/eclipse-oomph-console (@guw and @a-lange
         <repository>
          <id>github</id>
          <name>GitHub UoY-RoboStar Apache Maven Packages</name>
-         <url>https://maven.pkg.github.com/UoY-RoboStar/eclipse-oomph-console</url>
+         <url>https://maven.pkg.github.com/UoY-RoboStar/org.eclipse.oomph.console.root</url>
        </repository>
     </distributionManagement>
 
