@@ -4,8 +4,20 @@
 name: Maven Package
 
 on:
-  release:
-    types: [created]
+  push:
+    tags:
+      - 'v*'- name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }} (draft)
+          body: |
+            Test upload-to-github-release works with `actions/create-release`
+          draft: true
+          prerelease: false
 
 jobs:
   build:
@@ -33,7 +45,21 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
-    - uses: xresloader/upload-to-github-release@v1
+    # - name: Create Release
+    #   id: create_release
+    #   uses: actions/create-release@v1
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #   with:
+    #     tag_name: ${{ github.ref }}
+    #     release_name: Release ${{ github.ref }} (draft)
+    #     body: |
+    #       Release.
+    #     draft: true
+    #     prerelease: false
+          
+    - name: Create release
+      uses: xresloader/upload-to-github-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
