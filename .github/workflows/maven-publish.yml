@@ -29,6 +29,14 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn --batch-mode deploy -Dmaven.deploy.skip=false
+      run: mvn --batch-mode deploy -Dmaven.deploy.skip=false -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
+
+    - uses: xresloader/upload-to-github-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        file: "org.eclipse.oomph.console.product/target/products/*.tar.gz;org.eclipse.oomph.console.product/target/products/*.zip"
+        tags: true
+        draft: true
